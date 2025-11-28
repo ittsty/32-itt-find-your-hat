@@ -106,6 +106,7 @@ function moveRight(): void {
   handleTile();
 }
 function movePlayer(input: string): void {
+  board[playerRow][playerCol] = EMPTY;
   switch (input) {
     case "w":
       if (playerRow > 0) {
