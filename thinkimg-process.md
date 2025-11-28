@@ -117,3 +117,32 @@
 [Back to Table of Contents](#table-of-contents)
 
 ---
+## <span style="font-weight:bold; color: black; background-color: gold; padding: 0.5rem 2rem;">1. Workflow Planning</span>
+<img src="pic/flow.png">
+
+## <span style="font-weight:bold; color: black; background-color: gold; padding: 0.5rem 2rem; margin-top: 1rem; border-buttom: none;">2.1. Board Functions (Hardcoded)</span>
+เอาค่าในแต่ละแถวมาเรียงต่อกัน >> print ออกมาทีละแถว
+## <span style="font-weight:bold; color: black; background-color: gold; padding: 0.5rem 2rem;">2.2. Board Functions (Generated)</span>
+รับค่าจำนวนแถว จำนวนคอลลัม และจำนวนความหนาแน่นของหลุมที่ต้องการ </br>
+-> สร้างกระดานที่มีแต่ช่องว่าง </br>
+-> วนลูปสุ่มสร้างหลุมไปเรื่อยๆจนครบจำนวนที่ต้องการโดยที่ต้องสร้างจากช่องที่เป็นช่องว่างเท่านั้น </br>
+-> สุ่มสร้างตัวผู้เล่นพร้อมกับเก็บค่าโดยมีเงื่อนไขว่าจะต้องเป็นที่ว่างที่เหลืออยู่เท่านั้น </br>
+-> สุ่มสร้างหมวกพร้อมเก้บค่าเข้าตัวแปรโดยที่ต้องเป้นที่ที่เคยเป็นช่องว่างเท่านั้น </br>
+เอาค่าในแต่ละแถวมาเรียงต่อกัน >> print ออกมาทีละแถว
+
+## <span style="font-weight:bold; color: black; background-color: gold; padding: 0.5rem 2rem;">3. Input Functions</span>
+รับ input แล้วเอาไปทำให้เป้นตัวพิมพ์เล็กก่อน แล้วจากนั้นเอาไปเช็คว่าใช่คีย์ที่เราต้องการมั้ย (w,a,s,d) แล้ว retern ค่า input ที่เป้นstring ออกไปเพื่อเอาไปใช้เดินตัว player อีกที
+## <span style="font-weight:bold; color: black; background-color: gold; padding: 0.5rem 2rem;">4. Movement Functions</span>
+รับพารามิเตอร์จาก input มาแยกเคสตามค่าที่รับมาเป็น </br>
+บน/ w ล่าง/ s ซ้าย/ a ขวา/ d </br>
+จากนั้นเช็คว่าตำแหน่งปัจจุบันของ player นั้นถ้าเดินไปในทิศทางของ input แล้วจะยังอยู่ในกระดานหรือไม่ ถ้าออกนอกกระดานก็จะทำให้เกมจบ </br>
+แล้วเปลี่ยนแปลงค่าตำแหน่งของ player
+
+จากนั้นจึงทำการอัพเดตกระดาน โดยที่เช็คว่าตำแหน่งที่มานั้นเจอหลุมหรือหมวกรึเปล่าเพื่อเป็นเงื่อนไขในการจบเกม ถ้าไม่เจอหมวกหรือหลุม ก็ให้อัพเดตกระดานตรงช่องนั้นให้กลายเป็น player 
+## <span style="font-weight:bold; color: black; background-color: gold; padding: 0.5rem 2rem;">5. Game Rule Functions</span>
+เช็คเงื่อนไขว่า 1) player ตกกระดานมั้ย 2) เจอหมวกมั้ย 3) เจอหลุมมั้ย ถ้าข้อใดข้อหนึุ่งนี้เป็นจริงจะทำการออกมาจาก loop ที่เป็น gameloop เพื่อไปสรุปและแสดงผลลัพธ์
+## <span style="font-weight:bold; color: black; background-color: gold; padding: 0.5rem 2rem;">6. Game Play Loop</span>
+
+<span style="">gameplay loop 
+ รับ input ->  เดิน player -> อัพเดตกระดาน -> เช็คเงื่อนไข ถ้าจริงก็จะออกจากลูป แต่ถ้าเท็จก็จะลูปวนไปเรื่อยๆ แล้วหลังจากนั้นก้จะ แสดงผลแพ้ชนะจากเงื่อนไขที่เก็บมา
+ </span>
